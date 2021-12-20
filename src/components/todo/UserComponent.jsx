@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 //import DataService from '../../api/todo/DataService.js'
 import SearchBar  from './SearchBar.jsx'
 import axios from 'axios'
+import { handleDefaults } from 'plotly.js/lib/calendars';
 
 class UserComponent extends Component {
     constructor(props){
@@ -21,6 +22,12 @@ getUser(){
           this.setState({users : response.data})
      })
 }
+handleDeposit = userName => {
+    // const user = this.props.filter(c => c.userId === userId)
+    // const deposit = () => 
+    console.log(this.props.userName)
+}
+
 render() {
     return (
         <div>
