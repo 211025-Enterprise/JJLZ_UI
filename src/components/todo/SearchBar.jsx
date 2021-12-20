@@ -20,7 +20,9 @@ render(){
                 <AutoCompleteText items={SPFiveStocks} updateFunction={this.props.updateFunction}/>
         </div>
         </div>
-        <button type="submit" >Search</button>
+        <button type="submit" >Add to Watchlist</button>
+        <button type="submit" >Buy</button>
+        <button type="submit" >Sell</button>
         </form>
         
     );
