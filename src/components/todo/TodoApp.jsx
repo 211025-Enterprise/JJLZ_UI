@@ -12,7 +12,7 @@ import RegistrationComponent from './RegistrationComponent.jsx'
 import UserComponent from './UserComponent.jsx'
 import StockComponent from './StockComponent.jsx'
 import JJLZ from './JJLZ.jsx'
-//import SearchBar from './SearchBar.jsx'
+
 
 class TodoApp extends Component {
     render() {

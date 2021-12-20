@@ -8,19 +8,34 @@ class StockComponent extends Component {
     this.state = {
       stockChartXValues: [],
       stockChartYValues: [],
+      searchText: ""
     }
   }
 
-  componentDidMount() {
-    this.fetchStock();
+  updateSearchText = async (text) =>{
+    await this.setState({searchText: text}) 
+    // setState behind scenes
+    
+    var sda = text;
+    console.log(sda)
   }
 
-  fetchStock() {
+  componentDidMount=()=> {
+    // console.log('mounting') 
+    // this.updateSearchText()
+    // console.log('states search text: ', this.state.searchText) 
+    // this.fetchStock(this.state.searchText);
+    // console.log(this.state.searchText);
+  }
+
+
+  fetchStock=(text) =>{
     const pointerToThis = this;
     console.log(pointerToThis);
     const API_KEY = 'HGJWFG4N8AQ66ICD';
-  
-     let StockSymbol = 'FC';
+    console.log(text)
+    let StockSymbol = text;
+    //StockSymbol = text;
     let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
     let stockChartXValuesFunction = [];
     let stockChartYValuesFunction = [];
@@ -48,12 +63,15 @@ class StockComponent extends Component {
         }
       )
   }
+  
+  handleBuy = () => {
+    
+  }
 
   render() {
     return (
       <div>
-        <h1>JJLZ Stock Market</h1>
-        <SearchBar/>
+        <SearchBar updateFunction={this.updateSearchText, this.fetchStock} onBuy={this.handleBuy}/>
         <Plot
           data={[
             {
@@ -64,7 +82,7 @@ class StockComponent extends Component {
               marker: {color: 'blue'},
             }
           ]}
-          layout={{width: 720, height: 440, title: 'JJLZ Alchemy '}}
+          layout={{width: 720, height: 440, title: 'alc'}}
         />
       </div>
     )
