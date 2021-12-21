@@ -60,6 +60,10 @@ class StockComponent extends Component {
         }
       )
   }
+  
+  handleBuy = () => {
+    
+  }
 
   render() {
     return (

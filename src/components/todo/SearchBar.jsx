@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import '../../App.css' 
 import AutoCompleteText from './AutoCompleteText'
 import SPFiveStocks from './SPFiveStocks';
 import './AutoCompleteText.css';
@@ -45,5 +44,3 @@ render(){
 //     <button type="submit">Search</button>
 //     </form>)
 //     }
-
-  

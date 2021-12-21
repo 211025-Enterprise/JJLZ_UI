@@ -17,27 +17,33 @@ import JJLZ from './JJLZ.jsx'
 class TodoApp extends Component {
     render() {
         return (
-            <div className="TodoApp">
-                <Router>
-                    <>
-                        <HeaderComponent/>
-                        <Switch>
-                            <Route path="/" exact component={WelcomeComponent}/>  
-                            <Route path="/welcome" exact component={WelcomeComponent}/>                     
-                            <Route path="/register" component={RegistrationComponent}/>
-                            <Route path="/login" component={LoginComponent}/>
-                            <Route path="/jjlz" component={JJLZ}/>
-                            <Route path="/userDetail" component={UserComponent}/>
-                            <Route path="/stock" component={StockComponent}/>
-                            <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent}/>
-                            <AuthenticatedRoute path="/watchlist" component={WatchListComponent}/>
-                            <AuthenticatedRoute path="/logout" component={LogoutComponent}/>
-                            <Route component={ErrorComponent}/>
-                        </Switch>
-                        <FooterComponent/>
-                    </>
-                </Router>
+            // <div className="TodoApp">
+            //     <Router>
+            //         <>
+            //             <HeaderComponent/>
+            //             <Switch>
+            //                 <Route path="/" exact component={WelcomeComponent}/>  
+            //                 <Route path="/welcome" exact component={WelcomeComponent}/>                     
+            //                 <Route path="/register" component={RegistrationComponent}/>
+            //                 <Route path="/login" component={LoginComponent}/>
+            //                 <Route path="/jjlz" component={JJLZ}/>
+            //                 <Route path="/userDetail" component={UserComponent}/>
+            //                 <Route path="/stock" component={StockComponent}/>
+            //                 <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent}/>
+            //                 <AuthenticatedRoute path="/watchlist" component={WatchListComponent}/>
+            //                 <AuthenticatedRoute path="/logout" component={LogoutComponent}/>
+            //                 <Route component={ErrorComponent}/>
+            //             </Switch>
+            //             <FooterComponent/>
+            //         </>
+            //     </Router>
+            // </div>
+            <div id="content-wrapper" className="homepage">
+                <p id="title"></p>
+                <p id="create"></p>
+                <p id="logIn"></p>
             </div>
+            
         )
     }
 }

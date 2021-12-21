@@ -34,7 +34,6 @@ class RegistrationComponent extends Component {
        this.props.history.push('/login') 
    }
 
-
     handleChange(event) {
         //console.log(this.state);
         this.setState(

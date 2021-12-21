@@ -1,0 +1,362 @@
+.homepage {
+	background-image: url('/img/homepage-background.jpg');
+}
+
+.userpage {
+	background-image: url('/img/user-background.png');
+}
+
+#content-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 1;
+	color: black;
+	font-weight: 900;
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+}
+
+#content-wrapper #title {
+	font-size: 6rem;
+	margin: 0.1rem;
+	text-shadow: 0 0 1rem white, 0 0 1rem white, 0 0 2rem white, 0 0 3rem white, 0 0 3rem white, 0 0 4rem white;
+	cursor: default;
+}
+
+p[id^='register-'] {
+	font-size: 3rem;
+	margin: 0.5rem;
+	cursor: default;
+	text-shadow: 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white;
+}
+
+#register-success::before {
+	content: "Account created successfully!";
+}
+
+#register-fail::before {
+	content: "Failed to register";
+}
+
+#login-fail {
+	font-size: 3rem;
+	margin: 0.5rem;
+	cursor: default;
+	text-shadow: 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white;
+}
+
+#login-fail::before {
+	content: "Log-In failed";
+}
+
+#content-wrapper #create,#logIn {
+	font-size: 3rem;
+	margin: 0.1rem;
+	cursor: pointer;
+}
+
+#content-wrapper #title::before {
+	content: "JJLZ Algos";
+}
+
+#content-wrapper #create::before {
+	content: "Create Account";
+}
+
+#content-wrapper #logIn::before {
+	content: "Log In";
+}
+
+#content-wrapper #create:hover,#logIn:hover {
+	text-shadow: 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white;
+}
+
+#logInForm {
+	width: 25rem;
+	height: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	padding: 0;
+	margin: 0;
+}
+
+#createForm {
+	width: 30rem;
+	height: 22rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	padding: 0;
+	margin: 0;
+}
+
+.inputWrapper {
+	width: 100%;
+	white-space: nowrap;
+	margin: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.inputWrapper:focus-within {
+	text-shadow: 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white;
+}
+
+#formBackground {
+	background-image: inherit;
+	background-size: 100vw 100vh;
+	background-position: var(--formPos);
+	filter: blur(5px);
+	position: absolute;
+	z-index: -1;
+}
+
+.homepageForm input[type=text] {
+	padding: 4px 8px;
+	margin: 4px 0;
+	box-sizing: border-box;
+	font-weight: 600;
+}
+
+.homepageForm input[type=text]:focus {
+	outline: none !important;
+	border: 3px solid black;
+	box-shadow: 0 0 5px black;
+}
+
+.homepageForm input[type=password] {
+	padding: 4px 8px;
+	margin: 4px 0;
+	box-sizing: border-box;
+	font-weight: 600;
+}
+
+.homepageForm input[type=password]:focus {
+	outline: none !important;
+	border: 3px solid black;
+	box-shadow: 0 0 5px black;
+}
+
+.homepageForm label {
+	font-size: 2rem;
+	margin: 0.5rem;
+}
+
+.homepageForm #formControl {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+}
+
+#buyControl {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+}
+
+#buyStockBtn {
+	cursor: pointer;
+	text-align: center;
+	width: 100px;
+}
+
+#buyStockBtn::before {
+	content: "Buy";
+}
+
+#buyStockBtn:hover {
+	text-shadow: 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white;
+}
+
+#sellStockBtn {
+	cursor: pointer;
+	text-align: center;
+}
+
+#sellStockBtn::before {
+	content: "Sell";
+}
+
+#sellStockBtn:hover {
+	text-shadow: 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white;
+}
+
+#searchStockBtn {
+	cursor: pointer;
+	text-align: center;
+}
+
+#searchStockBtn::before {
+	content: "Search";
+}
+
+#searchStockBtn:hover {
+	text-shadow: 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white;
+}
+
+/*#submit::before {
+	content: "Submit";
+}*/
+
+#submit {
+	font-size: 2.2rem;
+	cursor: pointer;
+	margin: 1rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+
+#submit:hover {
+	text-shadow: 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white, 0 0 0.9rem white;
+}
+
+#back::before {
+	content: "Back";
+}
+
+#back {
+	font-size: 1.5rem;
+	cursor: pointer;
+	margin: 1rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+
+#back:hover {
+	text-shadow: 0 0 0.7rem white, 0 0 0.7rem white, 0 0 0.7rem white;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 5rem;
+	z-index: 10;
+	display: flex;
+	flex-flow: row no-wrap;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 5rem;
+	background-color: darkblue;
+	color: lightskyblue;
+	border-bottom: 5px solid black;
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+#header * {
+	padding: 0 1rem;
+}
+
+#header #logo-icon {
+	background-image: url('/img/icon.png');
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 3rem;
+}
+
+#header #logo-text {
+}
+
+#header #margin {
+	flex-grow: 1;
+}
+
+#header #account {
+}
+
+.dropbtn {
+	cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	color: white;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+}
+
+.dropdown-content {
+	display: none;
+	position: center;
+	background-color: darkblue;
+	min-width: 3rem;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	border: 3px solid black;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.dropdown-content div:hover {
+	color: white;
+}
+
+.show {
+	display: block;
+}
+
+#accountsummary {
+	width: 100%;
+	text-align: center;
+	margin-top: 7rem;
+	height: 7rem;
+	line-height: 7rem;
+	font-size: 2.5rem;
+}
+
+/*#content-wrapper.userpage {
+	display: block !important;
+}*/
+
+#stockChart {
+	width: 700px !important;
+	height: 500px !important;
+	z-index: 10;
+	padding: 60px;
+	margin: 20px;
+}
+
+.selem {
+	background-image: url('/img/element-background.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 20px;
+	margin: 20px;
+}
+
+#accountWrapper {
+	width: 40vw;
+	height: 20vw;
+}
+
+.stockCard {
+	text-align: center;
+}
+
+#stocklistWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
